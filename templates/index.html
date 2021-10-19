@@ -8,9 +8,13 @@
 </head>
 <body>
     <h2>Сайт инвентаризации</h2>
+    <form action="/add/" method="POST">
+        <input type="text" name="good">
+        <button>Добавить</button>
+    </form>
     <ol>
         {% for good in goods %}
-            <li>{{ good }}</li>
+            <li>{{ loop.index }}{{ good }}</li>
         {% endfor %}
     </ol>>
 </body>
